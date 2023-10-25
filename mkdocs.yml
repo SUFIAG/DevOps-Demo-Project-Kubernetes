@@ -1,0 +1,141 @@
+site_name: "Hello DevOps Project"
+site_description: "Hands on Kubernetes Projects"
+site_author: "Robusta.dev"
+site_url: "https://docs.robusta.dev/master/"
+
+# Copyright
+copyright: "&copy; 2023 Robusta"
+
+# Repository
+repo_name: "Hello DevOps Project"
+repo_url: "https://github.com/robusta-dev/Hello-DevOps-Project"
+edit_uri: "https://github.com/robusta-dev/Hello-DevOps-Project/tree/main/docs"
+
+# Configuration
+theme:
+  name: "material"
+  language: "en"
+  shortcuts:
+    help: 191 # ?
+    next: 78 # n
+    previous: 80 # p
+    search: 83 # s
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      primary: indigo
+      accent: indigo
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  # features:
+  #   - navigation.tabs
+  #   - navigation.tabs.sticky
+  #   - navigation.indexes
+
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.indexes
+    - navigation.top
+    - navigation.pruning
+    - search.highlight
+    - search.share
+    - search.suggest
+    - content.code.annotate
+    - content.code.copy
+    - header.autohide
+    - announce.dismiss
+    - toc.follow
+    - content.action.edit
+    - content.action.view
+    - content.code.annotate
+    - content.code.copy
+
+  #font:
+  #text: 'Ubuntu'
+  #code: 'Ubuntu Mono'
+  #icon:
+  # logo: 'images/logo.svg'
+  #favicon: 'assets/images/favicon.ico'
+
+# Extensions
+markdown_extensions:
+  - pymdownx.details
+  - admonition
+  - codehilite
+  - footnotes
+  - toc:
+      permalink: true
+      separator: "_"
+  - attr_list
+  - md_in_html
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+plugins:
+  - glightbox:
+      touchNavigation: true
+      loop: false
+      effect: zoom
+      slide_effect: slide
+      width: 100%
+      height: auto
+      zoomable: true
+      draggable: true
+      skip_classes:
+        - custom-skip-class-name
+      auto_caption: false
+      caption_position: bottom
+  - search:
+      separator: '[\s\-\.]+'
+      lang:
+        - en
+
+# Customization
+extra_javascript:
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.6/MathJax.js?config=TeX-MML-AM_CHTML"
+# extra_css:
+#   - "assets/css/custom.css"
+extra:
+  manifest: "manifest.json"
+  social:
+    - icon: "fontawesome/brands/github-alt"
+      link: "https://github.com/robusta-dev/robusta"
+    - icon: "fontawesome/brands/twitter"
+      link: "https://twitter.com/RobustaDev"
+
+# Page tree
+nav:
+  - 🏠Home: index.md
+  - "🏗️Projects": 
+        # - "Introduction": "projects/buildpythonlocally/introduction.md"
+      - "🔥Your First Docker Container": "projects/buildpythonlocally/yourfirstproject.md"
+        # - "About": "projects/meme-generator/about.md"
+        # - "Local Build": "projects/meme-generator/localbuild.md"
+        # - "Docker": "projects/meme-generator/docker.md"
+        # - "Kubernetes": "projects/meme-generator/kubernetes.md"
+  # - "🐍Python":
+  #     - "Flask Meme Generator": "python/python.md"
+  # - "📚Reference":
+  #     - "Virtual Environment": "reference/virtualenv.md"
+  #     - "K3s Cluster": "reference/localcluster.md"
+  #     - "Docker Buildx": "reference/dockerbuildx.md"
